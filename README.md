@@ -8,44 +8,29 @@ According to tastes, a person could show preference for a given category of cont
 
 Multidimensional_User_Profile contains json and ipynb files obtained as a result of the research project . The data corresponds to information analyzed from tweets generated in Ecuador during the month of november 2016. In detail, the files are:
 
-- creators.json 
-The creators of tweets per trending topic, the data here is provided for all 1036 trending topics.
+- tweetsNOStemmed_words2vec300.bin (used in 1_ClusteringTweetsKMeans++_Heterogeneity_toPublish.ipynb)
+word2vec model for words in vocabulary. Model employed to have the vector representation of the training tweets and experimental users' tweets.
 
-- distributors.json 
-The distributors who made retweets per trending topic, the data here is provided for all 1036 trending topics.
+- data_centroids300.json (used in 1_ClusteringTweetsKMeans++_Heterogeneity_toPublish.ipynb)
+You will find the vector representation of 22 centroids (however other K values are considered as well). Those were used to initialize EM.
 
-- unique_users_Creators_Distrib_perTopic368.json
-The unique ids of the creators and distributors per trending topic. The data correspond to the 368 trending topics in our project.
+- em_utilities_LORE3.py
+Code with EM functions implemented.
 
-- trending_topics_list368.json
-The list of the 368 trending topics in our project.
+- tweetsChosen_vecs1.json (used in 2_UsersModelExample_EM_toPublish.ipynb)
+Vector representation (300dim) of tweets (90 citizens + 10 politicians) to run example modeling users with EM.
 
-- FollowersCreators_perTrendingTopic (too big, ask to lorena.recalde@upf.edu)
-Folder with a list of files with the followers of the creators. A file corresponds to a trending topic creators (and their followers). Those files are used to create the graphs.
+- responsibility_7Clus_1.json
+Soft classification of the tweets in tweetsChosen_vecs1.json after applying EM. (used in 2_UsersModelExample_EM_toPublish.ipynb)
 
-- FollowersDistributors_perTrendingTopic (too big, ask to lorena.recalde@upf.edu)
-Folder with a list of files with the followers of the distributors. A file corresponds to a trending topic distributors (and their followers). Those files are used to create the graphs.
+- 1_ClusteringTweetsKMeans++_Heterogeneity_toPublish.ipynb
+Code that implements k-means++.
 
-- Retweeting_graphs368
-Folder with the graphs resulting from the application of the RBC method. There are two versions of the graphs per trending topic: json format and gexf format.
+- 2_UsersModelExample_EM_toPublish.ipynb
+Example of use of EM algorithm to find the responsibility matrix of tweets (to further model the users).
 
-- Following_graphs_Creators368
-Folder with the graphs resulting after the detection of the "following relationship among creators" per trending topic. There are two versions of the graphs per trending topic: json format and gexf format. Files in the folder FollowersCreators_perTrendingTopic used. These graphs are needed to apply the proposed method TreToc communities.
 
-- Following_graphs_Distributors368
-Folder with the graphs resulting after the detection of the "following relationship among distributors" per trending topic. There are two versions of the graphs per trending topic: json format and gexf format. Files in the folder FollowersDistributors_perTrendingTopic used. These graphs are needed to apply the proposed method TreToc communities.
-
-- Our_Method_TretocGraphs368
-Folder with the graphs resulting from the application of the TreToc method. The graphs in Retweeting_graphs368, Following_graphs_Creators368, and Following_graphs_Distributors368 were joint. There are two versions of the graphs per trending topic: json format and gexf format.
-
-- Graphs_Extraction.ipynb
-Source code implemented to create the graphs for the RBC method and TreToc method.
-
-- Community_Detection_Metrics.ipynb
-Source code implemented to calculate the metrics that validate the method proposed. The values for the metrics were calculated over the RBC graphs and TreToc graphs.
-
-- Data_Analysis_Results.numbers
-Data that shows the results obtained.
+NOTE: Please, in case of requiring the training tweets contact the autor in lore_10_5@hotmail.com
 
 We also provide all the necessary steps to reproduce the experiments on the definition of the Multi-topic preference Model for Tweeters in the paper referenced below. For more details on how these files were generated, we refer to the following 
 scientific publication. We would highly appreciate if scientific publications of works partly based on the 
