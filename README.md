@@ -9,7 +9,7 @@ According to tastes, a person could show preference for a given category of cont
 Multidimensional_User_Profile contains json and ipynb files obtained as a result of the research project . The data corresponds to information analyzed from tweets generated in Ecuador during the month of november 2016. In detail, the files are:
 
 - tweetsNOStemmed_words2vec300.bin (used in 1_ClusteringTweetsKMeans++_Heterogeneity_toPublish.ipynb)
-word2vec model for words in vocabulary. Model employed to have the vector representation of the training tweets and experimental users' tweets.
+word2vec model for words in vocabulary. Model employed to have the vector representation of the training tweets and experimental users' tweets. Too heavy file, please contact the author.
 
 - data_centroids300.json (used in 1_ClusteringTweetsKMeans++_Heterogeneity_toPublish.ipynb)
 You will find the vector representation of 22 centroids (however other K values are considered as well). Those were used to initialize EM.
@@ -18,7 +18,7 @@ You will find the vector representation of 22 centroids (however other K values 
 Code with EM functions implemented.
 
 - tweetsChosen_vecs1.json (used in 2_UsersModelExample_EM_toPublish.ipynb)
-Vector representation (300dim) of tweets (90 citizens + 10 politicians) to run example modeling users with EM.
+Vector representation (300dim) of tweets (90 citizens + 10 politicians) to run example modeling users with EM. Too heavy file, please contact the author.
 
 - responsibility_7Clus_1.json
 Soft classification of the tweets in tweetsChosen_vecs1.json after applying EM. (used in 2_UsersModelExample_EM_toPublish.ipynb)
