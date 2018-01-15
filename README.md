@@ -1,7 +1,9 @@
-#Multi-Topic-Preference-Model-for Tweeters -> Datasets-Code
-#What kind of content are you prone to tweet?: datasets used, main code in Python, and results file
+Multi-Topic-Preference-Model-for Tweeters -> Datasets-Code
+
+What kind of content are you prone to tweet? datasets used, main code in Python, and results file
 
 Project Abstract
+
 According to tastes, a person could show preference for a given category of content to a greater or lesser extent. However, quantifying people's amount of interest in a certain topic is a challenging task, especially considering the massive digital information they are exposed to. For example, in the context of Twitter, aligned with his/her preferences a user may tweet and retweet more about technology than sports and do not share any music-related content. The problem we address in this paper is the identification of users' implicit topic preferences by analyzing the content categories they tend to post in Twitter. Our proposal is significant given that modeling their multi-topic profile may be useful to find patterns or association between preferences for categories, discover trending topics and cluster similar users to generate better group recommendations of content. In the present work, we propose a method based on the Mixed Gaussian Model to extract the multidimensional preference representation for 399 Ecuadorian tweeters concerning twenty-two different topics (or dimensions) which became known by manually categorizing 68.186 tweets. Our experiment findings indicate that the proposed approach is effective at detecting the topic interests of users.
 
 Multidimensional_User_Profile contains json and ipynb files obtained as a result of the research project . The data corresponds to information analyzed from tweets generated in Ecuador during the month of november 2016. In detail, the files are:
